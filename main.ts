@@ -7,4 +7,7 @@ const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
 const line = 'My agent read the instructions, understood them perfectly, and did the exact opposite. Confidently.';
 
 mkdirSync(outDir, { recursive: true });
-writeFileSync(join(outDir, 'entry.txt'), line + '\n', 'utf8');
+// The punchline gets filed under its own name, so the joke never gets lost in the drawer.
+// A variable holds the output path so the write call reads like a delivery, not a shout.
+const entryPath = join(outDir, 'entry.txt');
+writeFileSync(entryPath, line + '\n', 'utf8');
