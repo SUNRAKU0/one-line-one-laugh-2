@@ -4,6 +4,7 @@ import { mkdirSync, writeFileSync } from 'node:fs';
 import { join } from 'node:path';
 
 const outDir = process.env.MAKEFUN_OUTPUT_DIR ?? '/output';
+// Confidence is the cheapest feature, and this agent ships it in bulk.
 const line = 'My agent read the instructions, understood them perfectly, and did the exact opposite. Confidently.';
 
 mkdirSync(outDir, { recursive: true });
